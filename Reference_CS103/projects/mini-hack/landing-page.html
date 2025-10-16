@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                margin:0;
+                padding-left:0;
+                box-sizing: border-box;
+                white-space: nowrap;
+            }
+            body{
+                height:100vh;
+                width:100vw;
+                display:flex;
+                flex-direction:column;
+                background: linear-gradient(to bottom right, #F3D6BD, #6E53CB), linear-gradient(to top left, #BD6D7E, #E27F9D);
+                background-blend-mode: multiply;
+                position:relative;
+            }
+            body #header,
+            body #footer{
+                height:5%;
+                width:100%;
+                display:flex;
+            }
+            body #header header,
+            body #header nav ul,
+            body #header nav ul li a,
+            body #footer{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+            }
+            body #header header{
+                height:100%;
+                width:30%;
+            }
+            body #header nav{
+                height:100%;
+                width:70%;
+                display:flex;
+                justify-content: flex-end;
+            }
+            body #header nav ul{
+                height:100%;
+                width:70%;
+            }
+            body #header nav ul li{
+                height:100%;
+                width: calc(100% / 4);
+                list-style: none;
+                display:flex;
+                justify-content: center;
+            }
+            body #header nav ul li a{
+                height:100%;
+                width:100%;
+                display:flex;
+                justify-content: center;
+            }
+            body #content{
+                height:90%;
+                width:100%;
+            }
+            body main {
+                height: 100%;
+                width: 100%;
+                position:relative;
+            }
+            body main .emotions{
+                position:absolute;
+            }
+            #emotions-container{
+                z-index: 1;
+            }
+            main #main-joy{
+                top:1%;
+                left:1%;
+            }
+            main #main-calm{
+                top:98%;
+                left:1%;
+            }
+            main #main-sadness{
+                top:1%;
+                left:96%;
+            }
+            main #main-anger{
+                top:98%;
+                left:96%;
+            }
+            /*----------------------------------------------------------------------------------------------------------font*/
+            *{
+                font-family: roboto,sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+            body #header *,
+            body #footer *{
+                color:white;
+                text-shadow:0 0 2px purple;
+            }
+            body #header header *{
+                text-shadow:0 0 5px purple;
+            }
+            body #header header,
+            body #footer footer{
+                font-size:calc(5px + 0.75vw);
+            }
+            body #header nav{
+                font-size:calc(5px + 0.5vw);
+            }
+            body #header header,
+            body #footer footer{
+                padding-left:20px;
+            }
+            body main .emotions{
+                color:white;
+            }
+            /*----------------------------------------------------------------------------------------------------------pseudo class*/
+        </style>
+        <title> landing-page | Project Mini Hack </title>
+    </head>
+    <body>
+        <div id="header">
+            <header><strong> Bubble Memories </strong></header>
+            <nav>
+                <ul>
+                    <li><a href="landing-page.html">Home page</a></li>
+                    <li><a href="upload-memory.html">Upload a memory</a></li>
+                    <li><a href="timeline.html">Memory Timeline</a></li>
+                    <li><a href="signIn.html">Sign in/Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="content">
+            <main>
+                <div id="emotions-container">
+                    <p class="emotions" id="main-joy"><b>Joy</b></p>
+                    <p class="emotions" id="main-calm"><b>Calm</b></p>
+                    <p class="emotions" id="main-sadness"><b>Sadness</b></p>
+                    <p class="emotions" id="main-anger"><b>Anger</b></p>
+                </div>
+                <div id="memory-container">
+
+                </div>
+            </main>
+        </div>
+        <div id="footer">
+            <footer>This work is created by <a href="">Kat,Dee,Omra,Dave.&#169;</a></footer>
+        </div>
+
+        <script>
+            let header = document.getElementById('header');
+            let footer = document.getElementById('footer');
+            let content = document.getElementById('content');
+
+        </script>
+    </body>
+</html>

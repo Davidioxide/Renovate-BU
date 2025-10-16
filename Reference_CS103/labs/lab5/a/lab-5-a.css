@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#page-wrapper{
+    width: 50%;
+    margin: auto;
+}
+
+main div p{
+    background-color:black;
+    color: white;
+}
+
+h1,h3{
+    font-size:small;
+    color:purple;
+}
+
+ol li{
+    background-color:cyan;
+}
+
+ul li{
+    background-color:yellow;
+}
+
+ul{
+    border:1px blue solid;
+}
+
+ol{
+    margin: 10px 20px 30px;
+}
+
+span{
+    color:red;
+}

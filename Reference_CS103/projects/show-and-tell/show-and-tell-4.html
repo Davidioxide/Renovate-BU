@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root{
+            --color1:#1E2022;
+            --color2:#52616B;
+            --color3:#C9D6DF;
+            --color4:#F0F5F9;
+        }
+        *{
+            margin:0;
+            padding-left:0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+        }
+        body{
+            height:auto;
+            width:100vw;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            /*overflow-y:auto;*/
+        }
+        #header,
+        #footer,
+        #header header,
+        #header nav,
+        #header nav ul,
+        #header nav ul li a{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+        }
+        #header,
+        #footer{
+            z-index:999;
+            height:5vh;
+            width:100%;
+        }
+        #header{
+            position:sticky;
+            top:0;
+        }
+        #header header,
+        #header nav{
+            height:100%;
+        }
+        #header header{
+            width:40%;
+        }
+        #header nav{
+            width:60%;
+        }
+        #header nav ul{
+            height:85%;
+            width:70%;
+            margin-left:30%;
+            display:flex;
+            list-style: none;
+            justify-content:space-around;
+        }
+        #header nav ul li{
+            height:100%;
+            width:calc(100% / 4);
+            border-left:5px solid var(--color4);
+            display:flex;
+            align-items:center;
+        }
+        #header nav ul li a{
+            color:white;
+            height:100%;
+            width:100%;
+            text-decoration:none;
+            justify-content:center;
+            text-shadow:0 0 5px white;
+        }
+        #content{
+            height:auto;
+            width:100%;
+            position:relative;
+        }
+        main{
+            height:auto;
+            width:100%;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .initialContent{
+            height:95vh;
+            width:100%;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .secondaryContent{
+            height:0;
+            width:100%;
+        }
+        #centralTitle{
+            z-index:2;
+            position:relative;
+            margin:auto;
+        }
+        #home-page-instruction{
+            z-index:2;
+            padding:1%;
+            position:absolute;
+            top:70%;
+            font-size:calc(10px + 0.5vw);
+            color:var(--color1);
+            background-color:var(--color4);
+        }
+        .central-circle{
+            z-index:0;
+            border-radius:50%;
+            aspect-ratio: 1/1;
+            position:absolute;
+            display:none;
+        }
+        .central-circle:nth-of-type(1){
+            width:10%;
+        }
+        .pics{
+            opacity:0;
+            z-index:1;
+            aspect-ratio: 1/1;
+            width:1%;
+            position:absolute;
+            left:50%;
+            top:50%;
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        .pics:nth-child(1){background-image: url("src/st4icons8-twitter.svg")}
+        .pics:nth-child(2){background-image: url("src/st4icons8-tiktok.svg")}
+        .pics:nth-child(3){background-image: url("src/st4icons8-linkedin.svg")}
+        .pics:nth-child(4){background-image: url("src/st4icons8-instagram.svg")}
+        .pics:nth-child(5){background-image: url("src/st4icons8-facebook-messenger.svg")}
+        .pics:nth-child(6){background-image: url("src/st4icons8-facebook.svg")}
+        .pics:nth-child(7){background-image: url("src/st4icons8-whatsapp.svg")}
+        .pics:nth-child(8){background-image: url("src/st4icons8-youtube.svg")}
+        /*----------------------------------------------------------------------------------------------------------------color, deco, effect*/
+        main{
+            background-color:white;
+        }
+        #header{
+            background-color:var(--color1);
+            opacity: 0.9;
+        }
+        #header header p strong{
+            color:white;
+        }
+        #header nav ul li a:hover{
+            color:black;
+            background-color:var(--color4);
+            transition:all 0.5s;
+            text-shadow:0 0 0.1vw black;
+        }
+        .central-circle:nth-of-type(1){
+            background:var(--color1);
+            opacity:0.55;
+        }
+        .central-circle,
+        #home-page-instruction,
+        #centralTitle,
+        .pics {
+            transition:1.5s ease-in-out;
+        }
+        .pics{
+            transition:2s;
+        }
+        /*----------------------------------------------------------------------------------------------------------------font adjust*/
+        #header header p,
+        #footer p{
+            padding-left:1vw;
+        }
+        #header *{
+            font-size: calc(10px + 1vw);
+            color:black;
+        }
+        #footer *{
+            font-size: calc(10px + 0.5vw);
+            color:black;
+        }
+        #header nav *{
+            font-size: calc(10px + 0.3vw);
+        }
+        main #centralTitle{
+            color:var(--color1);
+            text-shadow:0 0 2vw var(--color3);
+            font-size: calc(10px + 5vw);
+        }
+        /*----------------------------------------------------------------------------------------------------------------media query*/
+        @media screen and (max-width: 600px){
+            #header{
+                flex-direction:column;
+                height:8%;
+                padding:1%;
+            }
+            #header header,
+            #footer{
+                display:flex;
+                justify-content:space-around;
+            }
+            #header nav{
+                height:100%;
+                width:100%;
+            }
+            #header nav,
+            #header nav ul{
+                width:100%;
+                margin:0;
+            }
+            #header nav ul li{
+                border: .01vw solid white;
+            }
+        }
+    </style>
+    <title> ST4 </title>
+</head>
+<body>
+<div id="header">
+    <header><p><strong> BU Social Accounts </strong></p></header>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Messages</a></li>
+            <li><a href="">Log In</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="content">
+    <main id="main">
+        <div class="initialContent">
+            <p id="centralTitle"><strong>Follow BostonU</strong></p>
+            <p id="home-page-instruction"> =  Explore using the navigation bar above to see more  = </p>
+            <div class="central-circle"></div>
+            <div class="pics-class">
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+                <div class="pics"></div>
+            </div>
+        </div>
+        <div class="secondaryContent">
+
+        </div>
+    </main>
+</div>
+<footer id="footer"><p><strong>This work is created by <a href="">Dave &#169;</a></strong></p></footer>
+<script>
+    let main = document.getElementById("main");
+    let pics = document.getElementsByClassName("pics");
+    let centralTitle = document.getElementById("centralTitle");
+    let centralCircle = document.getElementsByClassName("central-circle");
+    let homePageInstruction = document.getElementById("home-page-instruction");
+
+
+    function randomPosition(){
+        return Math.floor(Math.random() * 35);
+    }
+    function randomAngle(){
+        return Math.floor(Math.random() * 360) - 180;
+    }
+    function picsOut(){
+        for(let i = 0; i < pics.length; i++){
+            let w = Math.floor(Math.random() * 5) + 10;
+            pics[i].style.width = `${w}%`;
+            pics[i].style.opacity = `${Math.random()*0.8 + 0.1}`;
+            centralTitle.style.fontSize = "calc(10px + 10vw)";
+            homePageInstruction.style.boxShadow = "0 0 10px var(--color1)";
+            pics[i].style.filter = "drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.4))";
+            if(i % 4 === 0){
+                pics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                pics[i].style.top = `${randomPosition()}%`;
+                pics[i].style.left = `${randomPosition()}%`;
+            }else if(i % 4 === 1){
+                pics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                pics[i].style.top = `${randomPosition()}%`;
+                pics[i].style.left = `${75-randomPosition()}%`;
+            }else if(i % 4 === 2){
+                pics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                pics[i].style.top = `${75-randomPosition()}%`;
+                pics[i].style.left = `${randomPosition()}%`;
+            }else if(i % 4 === 3){
+                pics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                pics[i].style.top = `${75-randomPosition()}%`;
+                pics[i].style.left = `${75-randomPosition()}%`;
+            }
+        }
+    }
+    window.onload = () => {
+        picsOut();
+        centralCircle[0].style.width = "25%";
+        homePageInstruction.style.top = "80%";
+    };
+</script>
+</body>
+</html>

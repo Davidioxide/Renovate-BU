@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    *{
+      margin:0;
+      padding-left:0;
+      box-sizing: border-box;
+      white-space: nowrap;
+    }
+    body{
+      height:100vh;
+      width:100vw;
+      display:flex;
+      flex-direction:column;
+      background: linear-gradient(to bottom right, #F3D6BD, #6E53CB), linear-gradient(to top left, #BD6D7E, #E27F9D);
+      background-blend-mode: multiply;
+      position:relative;
+    }
+    body #header,
+    body #footer{
+      height:5%;
+      width:100%;
+      display:flex;
+    }
+    body #header header,
+    body #header nav ul,
+    body #header nav ul li a,
+    body #footer{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+    }
+    body #header header{
+      height:100%;
+      width:30%;
+    }
+    body #header nav{
+      height:100%;
+      width:70%;
+      display:flex;
+      justify-content: flex-end;
+    }
+    body #header nav ul{
+      height:100%;
+      width:70%;
+    }
+    body #header nav ul li{
+      height:100%;
+      width: calc(100% / 4);
+      list-style: none;
+      display:flex;
+      justify-content: center;
+    }
+    body #header nav ul li a{
+      height:100%;
+      width:100%;
+      display:flex;
+      justify-content: center;
+    }
+    body #content{
+      height:90%;
+      width:100%;
+    }
+    body main {
+      height: 100%;
+      width: 100%;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+    }
+    .memory-box {
+      color:white;
+      height:70%;
+      width:30%;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 15px;
+    }
+    .memory-box label{
+      color:white;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.5);
+      color: #333;
+    }
+
+    label {
+      cursor: pointer;
+      color: #6200ea;
+      text-decoration: underline;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+    /*----------------------------------------------------------------------------------------------------------font*/
+    *{
+      font-family: roboto,sans-serif;
+    }
+    a{
+      text-decoration: none;
+    }
+    body #header *,
+    body #footer *{
+      color:white;
+      text-shadow:0 0 2px purple;
+    }
+    body #header header *{
+      text-shadow:0 0 5px purple;
+    }
+    body #header header,
+    body #footer footer{
+      font-size:calc(5px + 0.75vw);
+    }
+    body #header nav{
+      font-size:calc(5px + 0.5vw);
+    }
+    body #header header,
+    body #footer footer{
+      padding-left:20px;
+    }
+    /*----------------------------------------------------------------------------------------------------------pseudo class*/
+  </style>
+  <title> landing-page | Project Mini Hack </title>
+</head>
+<body>
+<div id="header">
+  <header><strong> Bubble Memories </strong></header>
+  <nav>
+    <ul>
+      <li><a href="landing-page.html">Home page</a></li>
+      <li><a href="upload-memory.html">Upload a memory</a></li>
+      <li><a href="timeline.html">Memory Timeline</a></li>
+      <li><a href="signIn.html">Sign in/Sign up</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="content">
+  <main>
+    <div class="memory-box">
+      <label for="content-describe-memory">describe your memory:</label>
+      <input id="content-describe-memory" type="text" placeholder="i went to">
+
+      <label for="content-upload">upload a photo</label>
+      <input id="content-upload" type="file" accept="image/*">
+
+      <label for="joy">joy</label>
+      <input id="joy" type="range" min="0" max="100">
+
+      <label for="calm">calm</label>
+      <input id="calm" type="range" min="0" max="100">
+
+      <label for="sadness">sadness</label>
+      <input id="sadness" type="range" min="0" max="100">
+
+      <label for="anger">anger</label>
+      <input id="anger" type="range" min="0" max="100">
+    </div>
+
+  </main>
+</div>
+<div id="footer">
+  <footer>This work is created by <a href="">Kat,Dee,Omra,Dave.&#169;</a></footer>
+</div>
+
+<script>
+  let header = document.getElementById('header');
+  let footer = document.getElementById('footer');
+  let content = document.getElementById('content');
+
+</script>
+</body>
+</html>

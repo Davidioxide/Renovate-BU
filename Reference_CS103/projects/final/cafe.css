@@ -1,0 +1,338 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+/*Created by Madison Kim*/
+img{
+    display: inline-block;
+    /*max-width: 600px;
+    max-height: 600px;
+     */
+    max-width: 100%;
+    height: auto;
+}
+
+
+#page-wrapper{
+    width:100%;
+    margin: auto;
+}
+main h1 {
+    font-size: calc(20px + 2vw);
+    font-family: nunito, sans-serif;
+    font-weight: 500;
+    padding-top: 30px;
+}
+h3 {
+    padding-top: 30px;
+}
+main {
+    font-size: calc(16px + 0.5vw);
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+main ol{
+    display: inline;
+}
+main ul{
+    list-style: none;
+}
+
+
+
+
+/*#container{*/
+/*    display:flex;*/
+/*    flex-direction:row;*/
+/*    justify-content: space-between;*/
+/*    background-image: linear-gradient(to right, #4F1C51, #a848ab);*/
+/*    !*position:fixed;*!*/
+/*    !*width:100vw;*!*/
+/*}*/
+
+
+/*header{*/
+/*   width:40%;*/
+/*   padding:1% 2%;*/
+/*   !*background-color:#4F1C51;*!*/
+/*   text-align: left;*/
+
+
+/*}*/
+
+
+/*header h1{*/
+/*    color:#f6daf7;*/
+/*    font:bold calc(30px + 70%) "bookantiqua",Didot,Serif;*/
+/*    text-shadow: 4px 4px 4px black;*/
+/*}*/
+
+
+/*header p{*/
+/*    color:white;*/
+/*    font:calc(10px + 20%) Consolas,Monaco,Monospaced;*/
+/*}*/
+
+
+/*nav{*/
+/*    width:70%;*/
+/*    padding:2.5% 2% 2% 2%;*/
+/*    !*background-color:#4F1C51;*!*/
+/*}*/
+
+
+/*nav ul{*/
+/*    padding-left:0;*/
+/*    list-style:none;*/
+/*    text-align:right;*/
+/*}*/
+
+
+/*nav li{*/
+/*    display:inline;*/
+/*    padding:1.3%;*/
+/*    margin:1%;*/
+/*    border-left:solid 3px #A55B4B;*/
+/*}*/
+
+
+/*nav a{*/
+/*    text-decoration:none;*/
+/*    font:calc(17px + 20%) Arial, sans-serif;*/
+/*    text-shadow: 2px 2px 4px black;*/
+/*    color:#f6daf7;*/
+/*    padding:1% 4% 1% 0;*/
+/*}*/
+
+
+main{
+    background-color:#F7EFE5;
+    /*padding:1%;*/
+    /*padding:5%;*/
+}
+
+
+/*footer{*/
+/*    background-color:#4F1C51;*/
+/*    padding:2% 0;*/
+/*}*/
+
+
+/*footer p{*/
+/*    color:#f6daf7;*/
+/*    text-align:center;*/
+/*}*/
+
+
+/*footer p a{*/
+/*    color:#f6daf7;*/
+/*    text-decoration: none;*/
+/*}*/
+
+
+
+
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #fafafa;
+    width:100vw;
+    height:100vh;
+    margin-top:auto;
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+
+button {
+    background-color: #4F1C51;
+    border: none;
+    color: #f6daf7;
+    padding: 10px 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #A55B4B;
+}
+
+
+#output {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #A55B4B;
+    text-align: left;
+}
+
+
+.cafe-card {
+    background-color: #fff;
+    border: 2px solid #4F1C51;
+    margin: 30px auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+
+.cafe-card:hover {
+    background-color: #f6daf7;
+}
+
+
+.cafe-img {
+    width: 100%;
+    height: 400px;
+}
+
+
+.cafe-info {
+    background-color: #f6daf7;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.cafe-menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.cafe-menu ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.cafe-menu li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+.cafe-menu img {
+    /*width: 500px;
+    height: 500px;
+    margin: 5px;
+  */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 5px auto;
+    display: block;
+}
+
+
+.cafe-menu img:hover {
+    opacity: 0.85;
+}
+
+
+
+
+@media screen and (max-width: 850px){
+    /*#container{*/
+    /*    position:relative;*/
+    /*    background-color:#4F1C51;*/
+    /*}*/
+
+
+
+
+    /*nav{*/
+    /*    margin: 0;*/
+    /*    position: absolute;*/
+    /*    right:0;*/
+    /*    bottom:25%;*/
+    /*    width:70%;*/
+    /*}*/
+
+
+
+
+    /*nav ul{*/
+    /*    text-align: center;*/
+    /*}*/
+
+
+
+
+    /*nav li {*/
+    /*    margin: 5% 0;*/
+    /*}*/
+
+
+
+
+    /*nav a {*/
+    /*    font: calc(14px + 20%) Arial, sans-serif;*/
+    /*}*/
+
+
+
+
+    /*header{*/
+    /*    width:30%;*/
+    /*}*/
+
+
+
+
+    /*header p{*/
+    /*    font-size:calc(9px + 20%);*/
+    /*}*/
+
+
+
+
+    main{
+        padding-top:25%;
+    }
+    .cafe-menu img {
+        max-width: 80%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+
+    img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+        /*#container {*/
+        /*    position:static;*/
+        /*    flex-direction: column;*/
+        /*    justify-content: center;*/
+        /*    width:100vw;*/
+        /*}*/
+        /*header{*/
+        /*    width:100%;*/
+        /*    text-align: center;*/
+        /*}*/
+        nav{
+            position: static;
+            width:100%;
+            margin-top:2%;
+        }
+}
+/*Madison Kim*/

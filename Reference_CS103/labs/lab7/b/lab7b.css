@@ -1,0 +1,90 @@
+* {
+    margin:0;
+    padding-left:0;
+    box-sizing:border-box;
+}
+body{
+    margin:auto;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    width:80%;
+    height:50%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    position: relative;
+}
+.photos{
+    position:absolute;
+    height:80%;
+    width:30%;
+    display:flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.text{
+    font-size:calc(10px + 2vw);
+    opacity:0;
+    text-align:center;
+    margin:auto;
+}
+#p1{
+    z-index: 4;
+    left:5%;
+    rotate:5deg;
+}
+#p2{
+    z-index: 3;
+    left:25%;
+    rotate:10deg;
+}
+#p3{
+    z-index:2;
+    left:45%;
+    rotate:15deg;
+}
+#p4{
+    z-index:1;
+    left:65%;
+    rotate:20deg;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------deco*/
+.text{
+    color:ghostwhite;
+}
+.photos{
+     border:5px solid greenyellow;
+ }
+#p1{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#p1{
+    background-image: url("src/1.jpg");
+}
+#p2{
+    background-image: url("src/2.png");
+}
+#p3{
+    background-image: url("src/3.webp");
+}
+#p4{
+    background-image: url("src/4.jpg");
+}
+/*----------------------------------------------------------------------------------------------------------------------dynamic*/
+#p1:hover .text, #p2:hover .text, #p3:hover .text, #p4:hover .text{
+    transition-duration: 2s;
+    opacity:1;
+}
+#p1:hover, #p2:hover, #p3:hover, #p4:hover{
+    z-index:999;
+}

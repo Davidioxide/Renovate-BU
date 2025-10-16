@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+<!--      <link rel="stylesheet" type="text/css" href="temp.css">-->
+      <style>
+          *{
+              margin: 0;
+              padding-left: 0;
+              box-sizing: border-box;
+          }
+          body{
+              height:100vh;
+              width:100vw;
+          }
+          .testingArea{
+              height:100%;
+              width:100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .testingArea div{
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              height:100px;
+              width:200px;
+              border-radius:20px;
+              color:white;
+              text-shadow:0 0 20px white;
+          }
+          .testingArea div:hover{
+              background-color:blue;
+              transition:1s;
+              color:black;
+              text-shadow:0 0 10px black;
+          }
+      </style>
+      <title> Temp | CS 103 </title>
+  </head>
+  <body>
+      <div class="testingArea">
+          <div> Aquí </div>
+      </div>
+  </body>
+</html>

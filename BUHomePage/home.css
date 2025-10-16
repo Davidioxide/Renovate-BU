@@ -1,0 +1,144 @@
+/* -----------------------------------------------------General Settings, Colorset management */
+:root{
+    /* Structural variables */
+    --headerDefaultH: 9vh;
+    /* ColorSet variables */
+    --defaultW:#ffffff;
+    --defaultB:#000000;
+    --defaultTranspC: rgba(255,255,255,0.5);
+    --color1:#D70E30;
+    --color2:#EB344c;
+    --color3:#edf2f4;
+    --color4:#8e9aad;
+    --color5:#2b2e42;
+
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+body{
+    position: static;
+    height:200vh;
+    width:100vw;
+}
+header,
+footer{
+    z-index: 1;
+    /* background-color: rgba(0,0,0,0.5); */
+    min-height:9vh;
+    height: auto;
+    width: 100vw;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 15px var(--defaultB);
+    background-color: var(--color1);
+    backdrop-filter: blur(30px);
+}
+
+/* -----------------------------------------------------Main content, header and footer */
+main{
+    height: inherit;
+    width: inherit;
+    background-color: var(--color3);
+}
+main #main_mediaSection{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color4);
+}
+main #main_mediaSection img{
+    z-index:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    filter: contrast(150%);
+}
+main #main_mediaSection p{
+    position: absolute;
+    top:50%;
+    left:40%;
+    transform: translate(-50%, -50%);
+    color: var(--defaultW);
+    font-size: 4rem;
+    text-shadow: 0px 0px 15px var(--defaultB);
+}
+header{
+    height: var(--headerDefaultH);
+    position: sticky;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+header #header_BUIcon{
+    height:100%;
+    width: 15%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:var(--color3);
+    text-shadow: 0px 0px 15px var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header nav{
+    width: 50%;
+    height:inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+header nav ul a{
+    text-decoration: none;
+    color: var(--defaultW);
+}
+header #header_giveBar,
+header #header_searchBar{
+    width: 5%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #header_giveBar button{
+    background-color: var(--color2);
+    color: var(--defaultW);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+header #header_searchBar input{
+    width: 60%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+}
+header #header_searchBar button{
+    width: 30%;
+    height: 100%;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color2);
+    color: var(--defaultW);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* -----------------------------------------------------Media query */

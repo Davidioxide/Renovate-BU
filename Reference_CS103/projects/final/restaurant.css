@@ -1,0 +1,519 @@
+/* Ruohan (Kerry) Li's portion starts here */
+/* internal page template starts here */
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+#page-wrapper{
+    width:100vw;
+    margin:auto;
+}
+
+
+#fixed{
+    position:fixed;
+    z-index:3;
+    /*I used z-index here specifically for my internal page, you can delete this if you don't need it*/
+}
+
+
+#container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:100vw;
+    background-image: linear-gradient(to right, #4F1C51, #a848ab);
+}
+
+
+header{
+    width:40%;
+    padding:1% 2%;
+    text-align:left;
+}
+
+
+header h1{
+    color:#f6daf7;
+    font:bold calc(30px + 70%) "book antiqua",Didot,Serif;
+    text-shadow: 4px 4px 4px black;
+}
+
+
+header p{
+    color:white;
+    font:calc(10px + 20%) Consolas,Monaco,Monospaced;
+}
+
+
+nav{
+    width:70%;
+    padding:2.5% 2% 2% 2%;
+
+
+}
+
+
+nav ul{
+    padding-left:0;
+    list-style:none;
+    text-align:right;
+}
+
+
+nav li{
+    display:inline;
+    padding:1.3%;
+    margin:1%;
+    border-left:solid 3px #A55B4B;
+}
+
+
+nav a{
+    text-decoration:none;
+    font:calc(17px + 20%) Arial, sans-serif;
+    text-shadow: 2px 2px 4px black;
+    color:#f6daf7;
+    padding:1% 4% 1% 0;
+}
+
+
+footer{
+    background-color:#4F1C51;
+    padding:2% 0;
+}
+
+
+main{
+    padding:10% 5% 5% 5%;
+}
+
+
+footer p{
+    color:#f6daf7;
+    text-align:center;
+}
+
+
+footer p a{
+    color:#f6daf7;
+    text-decoration: none;
+}
+
+#timeIs{
+    margin-top: 3%;
+    font:italic calc(30px + 20%) "Lucida Grande",Verdana, sans-serif;
+    color:#9e0084;
+}
+
+
+#js h1{
+    margin:auto;
+    padding:1%;
+    font:bold calc(40px + 20%) Palatino, Georgia, serif;
+    border:dashed 4px #a848ab;
+    width:fit-content;
+}
+
+
+#js p{
+    margin-top: 3%;
+    text-align: center;
+    font:bold italic calc(20px + 20%) "Lucida Grande",Verdana, sans-serif;
+    color: #9e0084;
+}
+
+
+main{
+    background-color:#F7EFE5;
+}
+
+
+main h2{
+    margin:5% auto;
+    font:bold calc(35px + 20%) "Lucida Grande",Verdana, sans-serif;
+    border-bottom: dotted 5px #EBD8B2;
+    width:fit-content;
+}
+
+
+.numbers{
+    color: #9e0084;
+}
+
+
+main h3{
+    margin:3% auto;
+    padding:1%;
+    color:#5930a6;
+    font:bold italic calc(27px + 20%) "Book-antiqua",Palatino, serif;
+    border: dotted 5px #C3ACD0;
+    width:fit-content;
+}
+
+
+.top-pics{
+    width:95%;
+    height:30vw;
+    position:relative;
+    background-color: #E2BFD9;
+    margin:5% auto;
+}
+
+
+#mikiya-2, #gyu-2{
+    left:5%;
+    transform:rotate(-10deg);
+}
+
+
+#mikiya-3{
+    left:27%;
+    transform:rotate(5deg);
+}
+
+
+#gyu-3{
+    left:27%;
+    top:5%;
+    transform:rotate(5deg);
+}
+
+
+#mikiya-4, #gyu-6{
+    left:53%;
+    transform:rotate(-6deg);
+}
+
+
+#mikiya-5{
+    left:73%;
+    transform:rotate(15deg);
+}
+
+
+#gyu-7{
+    top:25%;
+    left:70%;
+    max-width:30%;
+    transform:rotate(15deg);
+}
+
+
+#gep-1{
+    left:12%;
+    transform:rotate(-10deg);
+}
+
+
+#gep-2{
+    left:37%;
+    transform:rotate(-2deg);
+}
+
+
+#gep-5{
+    left:63%;
+    transform:rotate(13deg);
+}
+
+
+.main-pics{
+    position: absolute;
+    max-width:25%;
+    border:solid 4px #AA5486;
+    opacity:85%;
+    transition:max-width 1s;
+}
+
+
+.main-pics:hover{
+    z-index:2;
+    opacity: 100%;
+    max-width:30%;
+}
+
+
+#gyu-7:hover{
+    z-index:2;
+    opacity: 100%;
+    max-width:33%;
+}
+
+
+.loc{
+    font:bold calc(18px + 20%) "Book-antiqua",Palatino, serif;
+    margin-top:10%;
+    margin-left:2.5%;
+}
+
+
+.dish{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:85vw;
+    margin:auto;
+}
+
+
+.specific{
+    width:49%;
+    text-align: center;
+    background-color: rgba(232, 212, 252, 0.5);
+}
+
+
+.specific h4{
+    font:calc(23px + 20%) Calibri, Optima, sans-serif;
+    margin:3% auto;
+    border-bottom: double 3px #5930a6;
+    width:fit-content;
+}
+
+
+.specific p{
+    width:90%;
+    margin:3% auto;
+    text-align: left;
+    font:calc(18px + 20%) Calibri, Optima, sans-serif;
+}
+
+
+@media screen and (max-width: 850px) {
+    /*CSS template for internal pages starts here*/
+    #container {
+        position: relative;
+        background-color: #4F1C51;
+    }
+
+
+    nav {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        bottom: 25%;
+        width: 70%;
+    }
+
+
+    nav ul {
+        text-align: center;
+    }
+
+
+    nav li {
+        margin: 5% 0;
+    }
+
+
+    nav a {
+        font: calc(14px + 20%) Arial, sans-serif;
+    }
+
+
+    header {
+        width: 30%;
+    }
+
+
+    header p {
+        font-size: calc(9px + 20%);
+    }
+
+
+    main {
+        padding-top: 25%;
+    }
+    /*CSS template for internal pages finishes here*/
+
+
+    #timeIs{
+        margin-top:0;
+    }
+
+
+    #js h1{
+        margin-top: 2%;
+    }
+
+
+    main h2 {
+        font: bold calc(30px + 20%) "Lucida Grande", Verdana, sans-serif;
+    }
+
+
+    .dish{
+        flex-direction: column;
+    }
+
+
+    .specific{
+        width:100%;
+        margin:1% auto;
+    }
+
+
+    .specific img{
+        max-width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    /*CSS template for internal pages starts here*/
+    #container {
+        position:static;
+        flex-direction: column;
+        justify-content: center;
+        width:100vw;
+    }
+
+
+    header{
+        width:100%;
+        text-align: center;
+    }
+    nav{
+        position: static;
+        width:100%;
+        margin-top:2%;
+    }
+
+
+    nav ul{
+        text-align:center;
+    }
+
+
+    nav li{
+        margin:1.5%;
+    }
+
+
+    footer p{
+        font-size:calc(3px + 2vw);
+    }
+    /*CSS template for internal pages finishes here*/
+
+
+    #timeIs{
+        margin-top:5%;
+        font:italic calc(25px + 20%) "Lucida Grande",Verdana, sans-serif;
+    }
+
+
+    #js h1{
+        font:bold calc(30px + 20%) Palatino, Georgia, serif;
+    }
+
+
+    #js p{
+        font:bold italic calc(17px + 20%) "Lucida Grande",Verdana, sans-serif;
+    }
+
+
+    main h2 {
+        font: bold calc(25px + 20%) "Lucida Grande", Verdana, sans-serif;
+    }
+
+
+    .top-pics{
+        height: 60vh;
+    }
+    .main-pics{
+        max-width: 35%;
+    }
+
+
+    #mikiya-2, #gyu-2{
+        left:13%;
+    }
+
+
+    #mikiya-3{
+        left:52%;
+    }
+
+
+    #gyu-3{
+        left:52%;
+        top:5%;
+
+
+    }
+
+
+    #mikiya-4{
+        left:13%;
+        top:50%;
+    }
+
+
+    #gyu-6{
+        left:55%;
+        top:53%;
+    }
+
+
+    #mikiya-5{
+        left:52%;
+        top:50%;
+    }
+
+
+    #gyu-7{
+        top:60%;
+        left:5%;
+        max-width:45%;
+        transform:rotate(10deg);
+    }
+
+
+    #gep-1{
+        left:12%;
+    }
+
+
+
+
+    #gep-2{
+        left:53%;
+        transform:rotate(5deg);
+    }
+
+
+    #gep-5{
+        left:30%;
+        top:50%;
+        transform:rotate(10deg);
+    }
+
+
+    .loc {
+        font: bold calc(13px + 20%) "Book-antiqua", Palatino, serif;
+    }
+
+
+    main h3{
+        font:bold italic calc(23px + 20%) "Book-antiqua",Palatino, serif;
+    }
+
+
+    .specific h4{
+        font:calc(19px + 20%) Calibri, Optima, sans-serif;
+    }
+
+
+    .specific p{
+        font:calc(14px + 20%) Calibri, Optima, sans-serif;
+    }
+
+
+}
+/* internal page template finishes here */
+/* Ruohan (Kerry) Li's portion finishes here*/
+
+

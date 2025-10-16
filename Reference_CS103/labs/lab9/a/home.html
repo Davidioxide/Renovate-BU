@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      *{
+        margin:0;
+        padding-left:0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        white-space: nowrap;
+      }
+      body{
+        position:relative;
+        height:100vh;
+        width:100vw;
+        display:flex;
+        flex-direction:column;
+      }
+      #header,
+      #footer,
+      #header header,
+      #header nav,
+      #header nav ul,
+      #header nav ul li a{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+      #header,
+      #footer{
+        height:5%;
+        width:100%;
+      }
+      #header header,
+      #header nav{
+        height:100%;
+      }
+      #header header{
+        width:40%;
+      }
+      #header nav{
+        width:60%;
+      }
+      #header nav ul{
+        height:100%;
+        width:70%;
+        margin-left:30%;
+        display:flex;
+        list-style: none;
+        justify-content:space-around;
+      }
+      #header nav ul li{
+        height:75%;
+        width:calc(100% / 4);
+        border-left:5px solid white;
+        display:flex;
+        align-items:center;
+      }
+      #header nav ul li a{
+        height:100%;
+        width:100%;
+        text-decoration:none;
+        justify-content:center;
+      }
+      #header nav ul li:hover{
+        background-color:darkorange;
+      }
+      #content{
+        height:90%;
+        width:100%;
+        position:relative;
+      }
+      main{
+        height:100%;
+        width:100%;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-color:white;
+      }
+      #boston-eat{
+        position:absolute;
+        margin:auto;
+        z-index:1;
+      }
+      #central-circle{
+        z-index:0;
+        border-radius:50%;
+        aspect-ratio: 1/1;
+        width:50%;
+        background-color:white;
+      }
+      /*----------------------------------------------------------------------------------------------------------------color, deco*/
+      #header,
+      #footer{
+        background-color:#FAD02E;
+      }
+      #content{
+        background-color:#FFFFF0;
+      }
+      /*----------------------------------------------------------------------------------------------------------------font adjust*/
+      #header header p,
+      #footer p{
+        padding-left:5px;
+      }
+      #header *,
+      #footer *{
+        font-size: calc(10px + 1vw);
+        color:white;
+        text-shadow: 0 0 10px yellow;
+      }
+      #header nav *{
+        font-size: calc(10px + 0.3vw);
+      }
+      main #boston-eat{
+        color:white;
+        font-size: calc(10px + 8vw);
+        text-shadow: 0 0 10px black;
+      }
+      /*----------------------------------------------------------------------------------------------------------------media query*/
+      @media screen and (max-width: 600px){
+        #header{
+          flex-direction:column;
+          height:8%;
+        }
+        #header header,
+        #header nav{
+          height:50%;
+          width:100%;
+        }
+        #header nav,
+        #header nav ul{
+          width:100%;
+          margin:0;
+        }
+        #header nav ul li{
+          border: 4px solid white;
+        }
+      }
+    </style>
+    <title> Home page | Final Project </title>
+  </head>
+  <body>
+  <div id="header">
+    <header><p><strong>Boston University Eat!</strong></p></header>
+    <nav>
+      <ul>
+        <li><a href="">Restaurants</a></li>
+        <li><a href="">Cafe Shops</a></li>
+        <li><a href="">Desserts</a></li>
+        <li><a href="">More & About</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <main>
+      <p id="boston-eat"><strong>Boston Eat!</strong></p>
+      <div id="central-circle"></div>
+      <div id="food-pictures">
+
+      </div>
+    </main>
+  </div>
+  <footer id="footer"><p><strong>This work is created by <a href="">Kerry, Madison, and Dave &#169;</a></strong></p></footer>
+  <script></script>
+  </body>
+</html>

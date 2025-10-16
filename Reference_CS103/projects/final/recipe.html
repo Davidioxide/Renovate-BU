@@ -1,0 +1,234 @@
+<!--code by Dave starts here-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="internal-kerry.css">
+<!--        <link rel="stylesheet" type="text/css" href="internal-recipe.css">-->
+        <style>
+            *{
+                margin:0;
+                box-sizing:border-box;
+            }
+            main{
+                display:flex;
+                height:auto;
+                width:100%;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                /*position:relative;*/
+            }
+            main *{
+                font-family:Arial, sans-serif;
+            }
+            main #main-background{
+                height:100%;
+                width:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                z-index:1;
+                overflow:hidden;
+            }
+            main #main-recipes{
+                z-index:2;
+                height:auto;
+                width:75%;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-between;
+                align-items:center;
+                position:relative;
+            }
+            main #main-recipes > *{
+                margin:1vh auto;
+                height:20vh;
+                width:100%;
+                display:flex;
+                flex-direction:row;
+                border-left: 10px solid purple;
+                background-size:102%;
+                background: linear-gradient(to right, transparent, white);
+            }
+            main #main-recipes > *:hover{
+                transition:all 1s;
+                height:25vh;
+            }
+            main #main-recipes > * img{
+                z-index:-1;
+                min-height:100%;
+                min-width:100%;
+                position:relative;
+                object-fit: cover;
+            }
+            main #main-recipes div div{
+                width:50%;
+                position:absolute;
+                right:0;
+                margin:auto;
+                padding-right:4%;
+                text-shadow:0 0 2px purple;
+                text-align:right;
+                display:flex;
+                flex-direction:column;
+                justify-content:space-between;
+            }
+            main #main-recipes div div h1{
+                white-space: nowrap;
+            }
+            main #main-recipes div div p{
+                opacity:0;
+                margin-top:10%;
+            }
+            main #main-recipes #create > *{
+                width:60%;
+                text-shadow:0 0 2px purple;
+            }
+            main #main-recipes #create input,
+            main #main-recipes #create button{
+                height:10%;
+            }
+            main #main-recipes #create label,
+            main #main-recipes #create input,
+            main #main-recipes #create button{
+                display:none;
+            }
+            @media screen and (max-width:1150px){
+                main #main-recipes{
+                    width:100%;
+                }
+                main #main-recipes div div h1{
+                    white-space: wrap;
+                }
+                main #main-recipes div div p{
+                    font-size:10px;
+                }
+            }
+        </style>
+        <title> Recipe | Boston Eat! </title>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <div id="fixed">
+                <div id="container">
+                    <header>
+                        <h1>Taste Boston!</h1>
+                        <p>Best restaurants, cafes, and recipes</p>
+                        <!-- header is in the same line with nav -->
+                    </header>
+                    <nav>
+                        <!-- remember to link all nav tags -->
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="restaurant.html">Restaurant</a></li>
+                            <li><a href="cafe.html">Cafe</a></li>
+                            <li><a href="recipe.html">Recipe</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <main>
+                <div id="main-background">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="main-recipes">
+                    <div class="recipes" id="main-recipe-kraPao">
+                        <img src="src/recipeKraPao.jpg" alt="kraPao">
+                        <div>
+                            <h1>Kra Pao</h1>
+                            <p>
+                                Pad Kra Pao (ผัดกระเพรา), translating to "stir-fried holy basil" in Thai, is a vibrant dish that highlights the bold flavors of Thai cuisine. It is traditionally made with minced meat, often pork, chicken, or beef, stir-fried with garlic and fiery chilies. The dish's defining feature is holy basil, known for its peppery and aromatic notes, which impart a distinct depth of flavor. Typically served with jasmine rice and frequently topped with a golden, crispy fried egg, Pad Kra Pao is a dish where heat, herbaceousness, and savory elements come together in perfect harmony.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recipes" id="main-recipe-chickenBasil">
+                        <img src="src/recipeChickenBasil.jpg" alt="chickenBasil">
+                        <div>
+                            <h1>Chicken Basil</h1>
+                            <p>
+                                Chicken Basil, or "Gai Pad Kra Pao" (ไก่ผัดกระเพรา) in Thai, is a flavorful stir-fry dish that showcases the aromatic intensity of holy basil alongside tender pieces of chicken. Stir-fried with garlic and fiery chilies, the dish is brought to life with a savory blend of soy-based sauces, delivering a perfect balance of spice and herbaceous depth. Traditionally served with fragrant jasmine rice and often complemented by a crispy fried egg, Gai Pad Kra Pao is a delicious representation of Thai culinary simplicity and boldness.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recipes" id="main-recipe-tomYum">
+                        <img src="src/recipeTomYum.jpg" alt="tomYum">
+                        <div>
+                            <h1>Tom Yum</h1>
+                            <p>
+                                Tom Yum (ต้มยำ), meaning "boiled and spicy" in Thai, is a quintessential soup that encapsulates the bold and aromatic essence of Thai cuisine. This dish is traditionally made with a fragrant broth infused with lemongrass, galangal, and kaffir lime leaves, creating a harmony of citrusy and herbal notes. The addition of chilies and fish sauce brings a spicy, savory depth, while lime juice provides a vibrant tangy finish. Typically prepared with prawns (Tom Yum Goong), chicken, or mushrooms, this soup delivers a perfect balance of hot, sour, salty, and sweet flavors, making it a signature favorite among Thai dishes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recipes" id="main-recipe-khaoNiaoMamuang">
+                        <img src="src/recipeMangoStickyRice.jpg" alt="khaoNiaoMamuang">
+                        <div>
+                            <h1>Khao Niao Mamuang</h1>
+                            <p>
+                                Khao Niao Mamuang (ข้าวเหนียวมะม่วง), meaning "sticky rice with mango," is a beloved Thai dessert that combines creamy and aromatic flavors. At its heart is sweet sticky rice, cooked with rich coconut milk to achieve a luscious texture and subtle sweetness. The rice is paired with ripe, juicy mango slices, which add a bright and refreshing contrast. Often garnished with a drizzle of coconut cream and occasionally sprinkled with toasted mung beans or sesame seeds, Khao Niao Mamuang is a harmonious blend of tropical sweetness and comforting richness.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recipes" id="main-recipe-sundubuJjigae">
+                        <img src="src/recipeSoftTofu.jpg" alt="sundubuJjigae">
+                        <div>
+                            <h1>Sundubu Jjigae</h1>
+                            <p>
+                                Sundubu Jjigae (순두부찌개), or soft tofu stew, is a comforting and spicy Korean dish that highlights the delicate texture of uncurdled tofu. This hearty stew is prepared with a rich broth, typically infused with gochugaru (Korean chili powder), garlic, and sesame oil, creating a bold and warming base. Sundubu Jjigae often includes ingredients like clams, shrimp, pork, or beef, adding depth to the dish, alongside vegetables and sometimes a cracked egg stirred in just before serving. Served bubbling hot in a traditional earthenware pot, it is paired with steamed rice for a satisfying and flavorful meal.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="recipes" id="main-recipe-bulgogi">
+                        <img src="src/recipeBulgogi.jpg" alt="bulgogi">
+                        <div>
+                            <h1>Bulgogi</h1>
+                            <p>
+                                Bulgogi (불고기), meaning "fire meat" in Korean, is a classic dish that features thinly sliced beef marinated to perfection in a savory-sweet blend of soy sauce, sugar, garlic, sesame oil, and pear or apple for a hint of natural sweetness. The meat is grilled, stir-fried, or pan-cooked, allowing the marinade to caramelize and infuse each bite with its rich flavors. Often served with steamed rice, lettuce wraps, or an array of banchan (side dishes), Bulgogi is a tender and flavorful representation of Korean barbecue traditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script>
+                let recipes = document.getElementsByClassName('recipes');
+                let intros = document.querySelectorAll("main #main-recipes div div p");
+
+                function reAssignFont(){
+                    for(let i = 0; i < intros.length; i++){
+                        intros[i].style.fontSize = `calc(5px + 0.75vw)`;
+                    }
+                }
+                Array.from(recipes).forEach(recipe => {
+                    recipe.addEventListener("mouseenter", () => {
+                        recipe.style.transition = "height 1s";
+                        recipe.style.height = "60vh";
+                        recipe.querySelector("div p").style.transition = "all 1s";
+                        recipe.querySelector("div p").style.opacity = "1";
+                        reAssignFont();
+                        recipe.style.borderLeft = "none";
+                        recipe.style.borderRight = " 10px solid purple";
+                    });
+                    recipe.addEventListener("mouseleave", () => {
+                        recipe.style.transition = "height 1s";
+                        recipe.style.height = "20vh";
+                        recipe.querySelector("div p").style.transition = "all 1s";
+                        recipe.querySelector("div p").style.opacity = "0";
+                        reAssignFont();
+                        recipe.style.borderRight = "none";
+                        recipe.style.borderLeft = " 10px solid purple";
+                    });
+                });
+
+            </script>
+            <footer>
+                <p>The website is created by Madison Kim, Dave Feng, and Kerry Li.</p>
+                <p>All rights reserved &#169;<a href="credits.html"><u>Credits</u></a></p>
+            </footer>
+        </div>
+    </body>
+</html>
+<!--code by Dave ends here-->

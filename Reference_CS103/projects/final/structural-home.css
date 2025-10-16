@@ -1,0 +1,146 @@
+/*code by Dave*/
+:root{
+    --color1:#4F1C51;
+    --color2:#A55B4B;
+    --color3:#9E0083;
+    --color4:#F2EFE7;
+}
+/*code by Dave, and any places that utilize the variables are written by Dave*/
+*{
+    margin:0;
+    padding-left:0;
+    box-sizing: border-box;
+    /*code by Dave*/
+    white-space: nowrap;
+}
+#header, #header nav, #header nav ul, #header nav ul li a{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+header{
+    flex-direction:column;
+    justify-content:space-between;
+}
+#header, #footer{
+    z-index:999;
+    width:100%;
+}
+#header{
+    position:sticky;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    height:8vh;
+}
+#footer{
+    height:5vh;
+}
+#header header, #header nav{
+    height:100%;
+}
+#header header{
+    flex-direction:column;
+    height:65%;
+    width:40%;
+    justify-content: flex-start;
+    text-align: left;
+}
+#header nav{
+    width:60%;
+}
+#header nav ul{
+    height:65%;
+    width:70%;
+    margin-left:30%;
+    display:flex;
+    list-style: none;
+    justify-content:space-around;
+}
+#header nav ul li{
+    height:100%;
+    width:calc(100% / 4);
+    border-left:5px solid var(--color4);
+    display:flex;
+}
+#header nav ul li a{
+    color:white;
+    height:100%;
+    width:100%;
+    text-decoration:none;
+    justify-content:start;
+    padding-left:5%;
+    text-shadow:0 0 5px black;
+}
+/*----------------------------------------------------------------------------------------------------------------color, deco, effect*/
+main{
+    background-color:#F8F0F8;
+}
+#header, #footer{
+    background-color:var(--color1);
+}
+#header header p, #header header p strong, #footer p, footer p a{
+    color:white;
+}
+#header nav ul li a:hover{
+    color:black;
+    background-color:var(--color4);
+    transition:all 1.5s;
+    text-shadow:0 0 2px black;
+}
+/*----------------------------------------------------------------------------------------------------------------font adjust*/
+#header header p{
+    padding-left:1.5vw;
+    font-size: calc(10px + 0.3vw);
+}
+#header header h1{
+    color:var(--color4);
+    padding-left:1.5vw;
+    text-shadow: 4px 4px 4px var(--color1);
+}
+#header header{
+    text-align:start;
+}
+footer{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+}
+footer p{
+    color:#f6daf7;
+    text-align:center;
+}
+footer p a{
+    color:#f6daf7;
+    text-decoration: none;
+}
+#header nav *{
+    font-size: calc(10px + 0.7vw);
+}
+/*----------------------------------------------------------------------------------------------------------------media query*/
+@media screen and (max-width: 600px){
+    #header{
+        flex-direction:column;
+        height:8%;
+        padding:1%;
+    }
+    #header header,
+    #footer{
+        text-align:center;
+        display:flex;
+        justify-content:space-around;
+    }
+    #header nav{
+        height:100%;
+        width:100%;
+    }
+    #header nav,
+    #header nav ul{
+        width:100%;
+        margin:0;
+    }
+    #header nav ul li{
+        border: .01vw solid white;
+    }
+}

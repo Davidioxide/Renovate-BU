@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                margin:0;
+                padding-left:0;
+                box-sizing:border-box;
+                font:bold calc(16px + 30%) consolas, monospace;
+            }
+            body{
+                height:100vh;
+                width:100vw;
+                overflow:hidden;
+            }
+            header,
+            footer{
+                width:100%;
+                height:5%;
+                opacity:0.9;
+                color:black;
+                display:flex;
+                align-items:center;
+                padding-left:1%;
+                z-index:0;
+                /*border-top: 2px solid black;*/
+                /*border-bottom: 2px solid black;*/
+            }
+            footer h1 a{
+                color:black;
+            }
+            #container{
+                height:90%;
+                width:100%;
+            }
+            main{
+                height:100%;
+                width:100%;
+                position:relative;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            #registration{
+                width:35%;
+                height:75%;
+                background-color:white;
+                opacity:0.6;
+                border-radius:10px;
+                display:flex;
+                flex-direction:column;
+                z-index:1;
+            }
+            #registration div{
+                width:70%;
+                height:20%;
+                color:black;
+                margin:auto;
+                display:flex;
+                flex-direction:column;
+            }
+            #registration div input{
+                border:none;
+                outline:none;
+                border-bottom:3px solid black;
+                margin-top:3%;
+            }
+            #registration div button{
+                height:50%;
+                border-radius:10px;
+            }
+            #registration div button:hover{
+                cursor:pointer;
+            }
+            #registration *,
+            header *,
+            footer *{
+                /*text-shadow: 0 0 2.5px black;*/
+            }
+            #blurBackgroundContainer{
+                width:100%;
+                height:100%;
+                position:absolute;
+                z-index:0;
+            }
+            .blurBackground{
+                aspect-ratio: 1/1;
+                height:60%;
+                position:absolute;
+                border-radius:50%;
+                filter:blur(100px);
+            }
+            #blurBackground1{
+                background-color:hotpink;
+                z-index:3;
+                left:30%;
+                top:0;
+            }
+            #blurBackground2{
+                background-color:cornflowerblue;
+                z-index:2;
+                left:60%;
+                top:30%;
+            }
+            #blurBackground3{
+                background-color:mediumpurple;
+                z-index:1;
+                left:10%;
+                top:20%;
+            }
+            /*------------------------------------------------------------------------------------------------------------*/
+            .blurBackground{
+                transition:all 2.2s;
+            }
+            @media screen and (max-width:885px){
+                #registration{
+                    width:100%;
+                }
+            }
+        </style>
+        <title> ST2 </title>
+    </head>
+    <body id="body">
+    <header id="header">
+        <h1>Random Color Gradation - Practice Example</h1>
+    </header>
+    <div id="container">
+        <nav>
+        </nav>
+        <main id="main">
+            <div id="blurBackgroundContainer">
+                <div class="blurBackground" id="blurBackground1"></div>
+                <div class="blurBackground" id="blurBackground2"></div>
+                <div class="blurBackground" id="blurBackground3"></div>
+            </div>
+            <div id="registration">
+                <div style="text-align: center; font-size:calc(25px + 150%); margin-top:10%;"><h1>Welcome, CS103 Students!</h1></div>
+                <div><label for="inputUsername">Your BUID</label><input type="text" id="inputUsername" placeholder="U1234567"></div>
+                <div><label for="inputPassword">Password</label><input type="password" id="inputPassword" placeholder="1145141919810"></div>
+                <div style="text-align: center; font-size:calc(25px + 50%)"><button onclick="check()">Log In</button></div>
+            </div>
+        </main>
+    </div>
+    <footer id="footer">
+        <h1>This work is created by <a href="">Dave Feng, Credit &#169;</a></h1>
+    </footer>
+    <script>
+        let blurBackground1 = document.getElementById('blurBackground1');
+        let blurBackground2 = document.getElementById('blurBackground2');
+        let blurBackground3 = document.getElementById('blurBackground3');
+        let main = document.getElementById('main');
+        let Kchange;
+
+        function randomColorVal() {
+            let r = Math.floor(Math.random() * 236 + 10);
+            let g = Math.floor(Math.random() * 236 + 10);
+            let b = Math.floor(Math.random() * 236 + 10);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        function randomPositionTop(){
+            let p = Math.floor(Math.random() * 50 + (-5));
+            if(p === 0){
+                return `${p}`;
+            }else{
+                return `${p}%`;
+            }
+        }
+        function randomPositionLeft(){
+            let p = Math.floor(Math.random() * 71);
+            if(p === 0){
+                return `${p}`;
+            }else{
+                return `${p}%`;
+            }
+        }
+        function change(){
+            blurBackground1.style.backgroundColor = randomColorVal();
+            blurBackground2.style.backgroundColor = randomColorVal();
+            blurBackground3.style.backgroundColor = randomColorVal();
+
+            blurBackground1.style.top = randomPositionTop();
+            blurBackground1.style.left = randomPositionLeft();
+
+            blurBackground2.style.top = randomPositionTop();
+            blurBackground2.style.left = randomPositionLeft();
+
+            blurBackground3.style.top = randomPositionTop();
+            blurBackground3.style.left = randomPositionLeft();
+        }
+        function changeBack(){
+            /* change all the colors back */
+            blurBackground1.style.backgroundColor = "hotpink";
+            blurBackground2.style.backgroundColor = "cornflowerblue";
+            blurBackground3.style.backgroundColor = "mediumpurple";
+
+            /* change their positions back */
+            blurBackground1.style.left = "30";
+            blurBackground1.style.top = "0";
+
+            blurBackground2.style.left = "60%";
+            blurBackground2.style.top = "30%";
+
+            blurBackground3.style.left = "10%";
+            blurBackground1.style.top = "20%";
+        }
+        main.addEventListener("mouseenter", () => {
+            Kchange = setInterval(()=>{
+                change();
+            },2300);
+        });
+        main.addEventListener("mouseleave", () => {
+            clearInterval(Kchange);
+            changeBack();
+        });
+        function check(){
+
+        }
+    </script>
+    </body>
+</html>

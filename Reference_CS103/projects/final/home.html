@@ -1,0 +1,340 @@
+<!--code by Dave starts here-->
+<!--HTMl structure is created by Madison Kim-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="structural-home.css">
+    <style>
+        :root{
+            --color1:#4F1C51;
+            --color2:#9E0083;
+            --color3:#A55B4B;
+            --color4:#F2EFE7;
+        }
+        /*:root{*/
+        /*    --color1:#B22234;*/
+        /*    --color2:#D8464A;*/
+        /*    --color3:#EFA4B8;*/
+        /*    --color4:#FFDEDE;*/
+        /*}*/
+        /*code by Dave, and any places that utilize the variables are written by Dave*/
+        body{
+            height:auto;
+            width: 100vw;
+        }
+        #content{
+            height:auto;
+            width:100%;
+            position:relative;
+            overflow-x: hidden;
+        }
+        main{
+            height:auto;
+            width:100%;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .initialContent{
+            height:95vh;
+            width:100%;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            overflow:hidden;
+        }
+        .secondaryContent{
+            height:30vh;
+            width:100%;
+            text-align:center;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        #boston-eat{
+            z-index:2;
+            position:relative;
+            margin:auto;
+        }
+        #home-page-instruction{
+            z-index:2;
+            padding:1%;
+            position:absolute;
+            top:70%;
+            font-size:calc(10px + 0.5vw);
+            color:var(--color1);
+        }
+        #home-page-instruction a{
+            color:inherit;
+            text-decoration:none;
+            font-weight:bold;
+            transition:all 1s;
+        }
+        .central-circle{
+            z-index:1;
+            border-radius:50%;
+            aspect-ratio: 1/1;
+            position:absolute;
+        }
+        .central-circle:nth-of-type(1){
+            width:10%;
+        }
+        .food-pics{
+            z-index:1;
+            aspect-ratio: 1/1;
+            height:0.1%;
+            position:absolute;
+            left:50%;
+            top:50%;
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+        /*code by Dave*/
+        .food-pics:nth-child(1){background-image: url("src/homecheese-wedge.svg")}
+        .food-pics:nth-child(2){background-image: url("src/homepizza-apple.png")}
+        .food-pics:nth-child(3){background-image: url("src/homehamburger-facebook.png")}
+        .food-pics:nth-child(4){background-image: url("src/homeblueberries-whatsapp.png")}
+        .food-pics:nth-child(5){background-image: url("src/homelemon-apple.png")}
+        .food-pics:nth-child(6){background-image: url("src/homefrench-fries-facebook.png")}
+        .food-pics:nth-child(7){background-image: url("src/homeegg-fried-03.svg")}
+        .food-pics:nth-child(8){background-image: url("src/hometangerine-apple.png")}
+        /*code by Dave*/
+        /*----------------------------------------------------------------------------------------------------------------color, deco, effect*/
+        #header header p,
+        #header header p strong{
+            color:white;
+        }
+        #header nav ul li a:hover{
+            color:var(--color2);
+            background-color:var(--color4);
+            transition:all 0.5s;
+            text-shadow:0 0 0.1vw var(--color1);
+        }
+        .central-circle:nth-of-type(1){
+            background:var(--color1);
+            /*opacity:0.55;*/
+        }
+        .central-circle,
+        #home-page-instruction,
+        #boston-eat,
+        .food-pics {
+            transition:1.5s ease-in-out;
+        }
+        .food-pics{
+            transition:2s;
+        }
+        /*----------------------------------------------------------------------------------------------------------------font adjust*/
+        *{
+            font-family: Arial, sans-serif;
+        }
+        main #boston-eat{
+            font-family: Arial, sans-serif;
+            color:white;
+            text-shadow: 0 0 2vw var(--color1);
+            font-size: calc(10px + 5vw);
+        }
+        #welcome{
+            font:bold calc(27px + 20%) "Lucida Grande",Verdana, sans-serif;
+            color: var(--color1);
+        }
+        #text{
+            text-align:center;
+            width:100%;
+            margin:2% auto;
+            font-size:calc(18px + 0.2vw);
+        }
+        /*----------------------------------------------------------------------------------------------------------------media query*/
+        @media screen and (max-width: 885px){
+            .initialContent{
+                height:50vh;
+            }
+            .secondaryContent{
+                height:37vh;
+            }
+            .secondaryContent #text{
+                width:100%;
+                font-size:calc(10px + 0.1vw);
+            }
+            #home-page-instruction{
+                font-size:calc(8px + 0.08vw);
+            }
+        }
+        @media screen and (max-width: 885px){
+            #header{
+                flex-direction:column;
+                height:8%;
+                padding:1%;
+            }
+            #header header,
+            #footer{
+                text-align:center;
+                display:flex;
+                justify-content:space-around;
+            }
+            #header nav{
+                height:100%;
+                width:100%;
+            }
+            #header nav,
+            #header nav ul{
+                width:100%;
+                margin:0;
+            }
+            #header nav ul li{
+                border: .01vw solid white;
+            }
+        }
+    </style>
+    <title> Home page | Boston Eat! </title>
+</head>
+<body id="body">
+    <div id="header">
+        <header>
+            <h1> Taste Boston! </h1>
+            <p> Best restaurants, cafes, and recipes </p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="restaurant.html">Restaurant</a></li>
+                <li><a href="cafe.html">Cafe</a></li>
+                <li><a href="recipe.html">Recipe</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="content">
+        <main id="main">
+            <div class="initialContent">
+                <p id="boston-eat"><strong> Taste Boston </strong></p>
+                <p id="home-page-instruction"> = We are dedicated to providing the best experience for you, and each recommendation comes from a BU student, just like you! = </p>
+                <div class="central-circle"></div>
+                <div class="food-pics-class">
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                    <div class="food-pics"></div>
+                </div>
+            </div>
+            <div class="secondaryContent">
+                <p id="welcome">
+                    Welcome to Taste Boston!
+                </p>
+                <p id="text">
+                    Explore the top dining options in Boston that have been carefully selected for just for you.<br>
+                    If you're looking for a warm food spot, the most delicious dessert in town, <br>
+                    or a great place to buy groceries, we have everything you need.<br>
+                    Our team thoroughly explores the city to provide you with the best recommendations for restaurants,<br>
+                    hidden dessert spots,and local grocery stores that are favored by residents and a must-visit for visitors.<br>
+                    Let us be your guide to eating well in Boston.
+                </p>
+
+            </div>
+        </main>
+    </div>
+    <footer id="footer">
+        <p>This work is created by Kerry, Madison, and Dave</p>
+        <p>All rights reserved &#169; <a href="credits.html">Credits</a></p>
+    </footer>
+    <script>
+        let body = document.getElementById('body');
+        let main = document.getElementById("main");
+        let foodPics = document.getElementsByClassName("food-pics");
+        let bostonEat = document.getElementById("boston-eat");
+        let centralCircle = document.getElementsByClassName("central-circle");
+        let homePageInstruction = document.getElementById("home-page-instruction");
+        let initialContent = document.getElementsByClassName("initialContent");
+
+
+        function randomPosition(){
+            return Math.floor(Math.random() * 30);
+        }
+        function randomAngle(){
+            return Math.floor(Math.random() * 180) - 90;
+        }
+        function preview1(){
+            bostonEat.style.setProperty("text-shadow","none");
+            bostonEat.style.setProperty("background","linear-gradient(to bottom right,var(--color1),var(--color2),var(--color3))");
+            bostonEat.style.setProperty("-webkit-background-clip","text");
+            bostonEat.style.setProperty("-webkit-text-fill-color","transparent");
+
+            centralCircle[0].style.width = "25%";
+            centralCircle[0].style.backgroundColor = "#EFD6EC";
+        }
+        function preview2(){
+            centralCircle[0].style.width = "200%";
+            centralCircle[0].style.opacity = "1";
+            homePageInstruction.style.backgroundColor = "white";
+            let createdPreview = document.createElement("video");
+            createdPreview.autoplay = true;
+            createdPreview.controls = false;
+            createdPreview.muted = true;
+            createdPreview.loop = true;
+            createdPreview.style.height = "100%";
+            createdPreview.style.minWidth = "100%";
+            createdPreview.style.zIndex = "0";
+            createdPreview.style.position = "absolute";
+            createdPreview.id = "preview";
+            createdPreview.style.opacity = "1";
+            createdPreview.style.objectFit = "cover";
+            initialContent[0].appendChild(createdPreview);
+            setTimeout(()=>{
+                createdPreview.src = "src/preview.mp4";
+                centralCircle[0].style.opacity = "0";
+            },1600);
+        }
+        function foodOut(n) {
+            for(let i = 0; i < foodPics.length; i++){
+                let h = Math.floor(Math.random() * 15) + 15;
+                foodPics[i].style.height = `${h}%`;
+                foodPics[i].style.opacity = `${n}`;
+                bostonEat.style.fontSize = "calc(10px + 10vw)";
+                homePageInstruction.style.boxShadow = "0 0 10px var(--color1)";
+                if(i % 4 === 0){
+                    foodPics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                    foodPics[i].style.top = `${randomPosition()}%`;
+                    foodPics[i].style.left = `${randomPosition()}%`;
+                }else if(i % 4 === 1){
+                    foodPics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                    foodPics[i].style.top = `${randomPosition()}%`;
+                    foodPics[i].style.left = `${75-randomPosition()}%`;
+                }else if(i % 4 === 2){
+                    foodPics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                    foodPics[i].style.top = `${75-randomPosition()}%`;
+                    foodPics[i].style.left = `${randomPosition()}%`;
+                }else if(i % 4 === 3){
+                    foodPics[i].style.transform = `rotate(${randomAngle()}deg)`;
+                    foodPics[i].style.top = `${75-randomPosition()}%`;
+                    foodPics[i].style.left = `${75-randomPosition()}%`;
+                }
+                foodPics[i].style.filter = `blur(${Math.random()*6 - 1}px)`;
+
+            }
+        }
+        window.onload = () => {
+            // foodOut(0);
+
+
+            if(Math.random() > 0.5){
+                foodOut(1);
+                preview1();
+            }else{
+                foodOut(0);
+                preview2();
+            }
+            homePageInstruction.style.top = "80%";
+        };
+    </script>
+</body>
+</html>
+<!--code by Dave ends here-->

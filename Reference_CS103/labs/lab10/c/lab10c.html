@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            *{
+                margin:0;
+                padding-left:0;
+                box-sizing:border-box;
+                font:calc(10px + 1vw) roboto,sans-serif;
+            }
+            html{
+                height:100%;
+            }
+            body{
+                min-height:100vh;
+                height:100%;
+                width:100vw;
+            }
+            #mainContainer{
+                height:100%;
+                width:100%;
+            }
+            main{
+                height:100%;
+                width:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            main .favoriteBar{
+
+            }
+            main .favoriteBar #output{
+                /*list-style: none;*/
+            }
+        </style>
+        <title> Lab-10-c | CS 103 </title>
+    </head>
+    <body>
+        <div id="header">
+            <header></header>
+        </div>
+        <div id="mainContainer">
+            <main id="main">
+                <div class="favoriteBar">
+                    <label for="inputFavorite">Favorite</label><input id="inputFavorite">
+                    <button onclick="addFavorite()">Add</button>
+                    <button onclick="revealFavorite()">Reveal</button>
+                    <ul id="output"></ul>
+                </div>
+            </main>
+        </div>
+        <div id="footer">
+            <footer></footer>
+        </div>
+        <script src="lab10c.js"></script>
+    </body>
+</html>

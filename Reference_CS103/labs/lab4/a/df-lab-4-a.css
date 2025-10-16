@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    box-sizing:border-box;
+}
+
+nav{
+    padding-left:0px;
+    background-color:red;
+}
+
+footer{
+    background-color:red;
+}
+
+nav li{
+    display:inline;
+}
+
+div{
+    margin:auto;
+    background-color:grey;
+    text-align:center;
+}
+
+header{
+    background-color:darkred;
+}
+
+header h1{
+    color:grey;
+}
+
+main{
+    background-color:grey;
+}
+
+main p{
+    color:green;
+    border: 1px dashed blue;
+}

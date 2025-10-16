@@ -1,0 +1,196 @@
+/* Ruohan (Kerry) Li's portion starts here */
+/* internal page template starts here */
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+
+#page-wrapper{
+    width:100vw;
+    margin:auto;
+}
+
+
+#fixed{
+    position:fixed;
+    z-index:3;
+    /*I used z-index here specifically for my internal page, you can delete this if you don't need it*/
+}
+
+
+#container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width:100vw;
+}
+
+
+header{
+    width:40%;
+    padding:1% 2%;
+    background-color:#4F1C51;
+    text-align:left;
+}
+
+
+header h1{
+    color:#f6daf7;
+    font:bold calc(30px + 70%) "book antiqua",Didot,Serif;
+    text-shadow: 4px 4px 4px black;
+}
+
+
+header p{
+    color:white;
+    font:calc(10px + 20%) Consolas,Monaco,Monospaced;
+}
+
+
+nav{
+    width:70%;
+    padding:2.5% 2% 2% 2%;
+    background-color:#4F1C51;
+
+}
+
+
+nav ul{
+    padding-left:0;
+    list-style:none;
+    text-align:right;
+}
+
+
+nav li{
+    display:inline;
+    padding:1.3%;
+    margin:1%;
+    border-left:solid 3px #A55B4B;
+}
+
+
+nav a{
+    text-decoration:none;
+    font:calc(17px + 20%) Arial, sans-serif;
+    text-shadow: 2px 2px 4px black;
+    color:#f6daf7;
+    padding:1% 4% 1% 0;
+}
+
+
+footer{
+    background-color:#4F1C51;
+    padding:2% 0;
+}
+
+
+main{
+    padding:10% 5% 5% 5%;
+}
+
+
+footer p{
+    color:#f6daf7;
+    text-align:center;
+}
+
+
+footer p a{
+    color:#f6daf7;
+    text-decoration: none;
+}
+
+
+nav a:hover{
+    background-color:rgb(195, 172, 208, 0.6);
+
+
+}
+
+
+/* internal page template stops here */
+
+
+
+
+@media screen and (max-width: 850px){
+    #container{
+        position:relative;
+        background-color:#4F1C51;
+    }
+
+
+    nav{
+        margin: 0;
+        position: absolute;
+        right:0;
+        bottom:25%;
+        width:70%;
+    }
+
+
+    nav ul{
+        text-align: center;
+    }
+
+
+    nav li {
+        margin: 5% 0;
+    }
+
+
+    nav a {
+        font: calc(14px + 20%) Arial, sans-serif;
+    }
+
+
+    header{
+        width:30%;
+    }
+
+
+    header p{
+        font-size:calc(9px + 20%);
+    }
+
+
+    main{
+        padding-top:25%;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    #container {
+        position:static;
+        flex-direction: column;
+        justify-content: center;
+        width:100vw;
+    }
+
+
+    header{
+        width:100%;
+        text-align: center;
+    }
+    nav{
+        position: static;
+        width:100%;
+        margin-top:2%;
+    }
+
+
+    nav ul{
+        text-align:center;
+    }
+
+
+    nav li{
+        margin:1.5%;
+    }
+
+
+}
+/* Ruohan (Kerry) Li's portion finishes here*/

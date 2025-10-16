@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head id="head">
+        <meta charset="UTF-8">
+        <style>
+            /*----------------------------------------------------------------------------------------------------------------------structure*/
+            *{
+                margin:0;
+                padding-left:0;
+                box-sizing:border-box;
+            }
+            body{
+                /* by default, occupies the whole screen */
+                height:100vh;
+                width:100vw;
+                position:relative;
+            }
+            #page-wrapper{
+                /* inherit 100% from the body, occupy 100% of the body */
+                height:100%;
+                width:100%;
+            }
+            header,
+            footer{
+                /* each 5%, adjust everything within vertically centered */
+                height:5%;
+                display:flex;
+                align-items: center;
+            }
+            #container{
+                /* occupies 90%, matches with header and footer */
+                height:90%;
+            }
+            header h1,
+            footer h1{
+                /* for visual effects, push the h1 tags by 2% */
+                margin:auto 2%;
+            }
+
+            header h1{
+                /* assign h1 and nav 30% of width, respectively */
+                width:30%;
+            }
+            header nav{
+                /* adjust nav to the right position of header */
+                height:100%;
+                width:40%;
+                margin-left:auto;
+            }
+            header nav ul{
+                /* no list style, the entries for nav will be placed horizontally */
+                height:100%;
+                list-style:none;
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            header nav ul li{
+                /* 100% height and equal width makes sure the li doesn't squeeze other */
+                height:100%;
+                width:calc(100% / 3);
+                display:flex;
+            }
+            header nav ul li a{
+                /* separate the a tag and its border, remove the default decorations */
+                height:100%;
+                width:100%;
+                text-decoration: none;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            footer h1 a{
+                /* remove the default blue color of anchor tags */
+                background-color:transparent;
+            }
+            main{
+                /* center everything in main */
+                height:100%;
+                display:flex;
+                align-items: center;
+            }
+            #x{
+                /* make the x and make it always on top */
+                height:100px;
+                width:100px;
+                margin:auto;
+                border-radius: 10%;
+                z-index:999;
+            }
+            #x a{
+                /* make the div tag clickable */
+                height:100%;
+                width:100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration:none;
+                font-size:calc(10px + 100%);
+            }
+            /*----------------------------------------------------------------------------------------------------------------------color and decoration*/
+            header,
+            footer,
+            footer a{
+                background-color:black;
+                color:white;
+            }
+            header nav ul li a{
+                color:white;
+            }
+            header nav ul li{
+                border-left:6px dashed white;
+            }
+            #x{
+                /*border-width:5px;*/
+                /*border-style:solid;*/
+                /*border-color: transparent;*/
+                /*background-color:white;*/
+            }
+            #x a{
+                color:black;
+            }
+            #x a strong{
+                color:inherit;
+            }
+            /*----------------------------------------------------------------------------------------------------------------------dynamic*/
+            #x,
+            #x a strong,
+            header,
+            footer{
+                transition-duration: 1.5s;
+                transition-timing-function: ease-in-out;
+            }
+            #x:hover{
+                width:200px;
+                height:200px;
+                border-radius: 8%;
+                border-width:10px;
+                /*box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);*/
+            }
+            #x:hover a strong{
+                font-size:calc(10px + 200%);
+                color:black;
+            }
+            header nav ul li:hover{
+                background-color:lightslategrey;
+            }
+            /*----------------------------------------------------------------------------------------------------------------------font*/
+            *{
+                font-family:arial, sans-serif;
+            }
+            /*----------------------------------------------------------------------------------------------------------------------media query*/
+            @media screen and (max-width:1325px){
+                *{
+                    font-size:calc(5px + 20%);
+                }
+                h1,header a{
+                    font-size:calc(5px + 100%);
+                }
+                a{
+                    font-size:100%;
+                }
+            }
+        </style>
+        <title> ST1 </title>
+    </head>
+    <body id="body">
+        <div id="page-wrapper">
+            <header id="header">
+                <h1>Random Color Gradation</h1>
+                <nav>
+                    <ul>
+                        <li><a href=""><strong>Home</strong></a></li>
+                        <li><a href=""><strong>About</strong></a></li>
+                        <li><a href=""><strong>Log out</strong></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <main>
+                    <div id="x"><a href=""><strong>Aquí</strong></a></div>
+                </main>
+            </div>
+            <footer id="footer">
+                <h1>This work is created by <a href="">Dave Feng, Credit &#169;</a></h1>
+            </footer>
+        </div>
+    <script>
+        let x = document.getElementById('x');
+        let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
+        let body = document.getElementById('body');
+        let Kchange;
+        let KHeaderFooter;
+
+        x.addEventListener("mouseenter", () => {
+            Kchange = setInterval(change, 1500);
+        });
+        x.addEventListener("mouseleave", () => {
+            clearInterval(Kchange);
+            changeBack();
+        });
+        // temporary additional feature;
+        header.addEventListener("mouseenter", () => {
+            KHeaderFooter = setInterval(()=>{
+                let temp = randomColorVal();
+                header.style.backgroundColor = temp;
+                footer.style.backgroundColor = temp;
+            }, 1500);
+        });
+        header.addEventListener("mouseleave", () => {
+            clearInterval(KHeaderFooter);
+            header.style.backgroundColor = "black";
+            footer.style.backgroundColor = "black";
+        });
+        //
+        function change(){
+            let temp = randomColorVal();
+            // x.style.borderColor = temp;
+            x.style.boxShadow = `${Math.random()*15 - 7.5}px ${Math.random()*15 - 7.5}px 35px ${temp}`;
+            // x.children[0].children[0].style.color = temp;
+            // header.style.backgroundColor = temp;
+            // footer.style.backgroundColor = temp;
+        }
+        function changeBack(){
+            x.style.borderColor = "grey";
+            x.style.boxShadow = `0 0 0 rgba(0, 0, 0, 0.5)`;
+            x.children[0].children[0].style.color = "black";
+            header.style.backgroundColor = "black";
+            footer.style.backgroundColor = "black";
+        }
+        function randomColorVal() {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+    </script>
+    </body>
+</html>
